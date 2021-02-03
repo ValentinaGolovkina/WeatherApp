@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lime">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green">
+        <TextView
+            android:id="@+id/textViewCity"
+            android:layout_width= "0dp"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:textSize="20sp"
+            android:text="Belgorod"
+            android:layout_weight="4"
+            android:textColor="@color/light_black"/>
+    
+        <Button
+            android:id="@+id/buttonChooseCity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Изменить"
+            android:layout_weight="3"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/light_black"
+            style="?android:attr/borderlessButtonStyle"/>
+        <ImageButton
+            android:id="@+id/getLocation"
+            android:src="@drawable/near_me_disabled_18dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:background="@color/cardview_shadow_end_color"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/dt"
+            android:layout_width= "wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:text="-"
+            android:textColor="@color/light_black"
+            />
+        <TextView
+            android:id="@+id/description"
+            android:layout_width= "wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="22sp"
+            android:text=""
+            android:textColor="@color/light_black"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType ="centerInside"
+                android:layout_marginRight="40dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/temp"
+                android:layout_width= "wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="70sp"
+                android:text="-"
+                android:textStyle="bold"
+                android:textColor="@color/light_black"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tempMinMax"
+            android:layout_width= "wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="-"
+            android:paddingBottom = "16dp"
+            android:textColor="@color/light_black"/>
+    </LinearLayout>
+
+    <GridLayout
+        android:stretchMode = "spacingWidthUniform"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:rowCount="4"
+        android:padding="5dp"
+        android:background="@color/green">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_columnWeight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ВОСХОД"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sunrise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/light_black"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_columnWeight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ЗАКАТ"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sunset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/light_black"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_columnWeight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ДАВЛЕНИЕ"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/pressure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/light_black"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_columnWeight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ВЛАЖНОСТЬ"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/light_black"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_columnWeight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ВЕТЕР"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/windSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/light_black"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_columnWeight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ОЩУЩАЕТСЯ КАК"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/temp_feel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/light_black"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_columnWeight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ВИДИМОСТЬ"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/visibility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/light_black"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_columnWeight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ОБЛАЧНОСТЬ"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/clouds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/light_black"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </GridLayout>
+</LinearLayout>
+</ScrollView>
